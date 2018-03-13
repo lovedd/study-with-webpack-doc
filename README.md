@@ -4,7 +4,7 @@ folllow the webpack doc, just do it.
 
 #1. commit 隐式依赖
 
-在此示例中，<script> 标签之间存在隐式依赖关系。index.js 文件执行之前，还依赖于页面中引入的 lodash。之所以说是隐式的是因为 index.js 并未显式声明需要引入 lodash，只是假定推测已经存在一个全局变量 _。
+在此示例中，\<script>标签之间存在隐式依赖关系。index.js 文件执行之前，还依赖于页面中引入的 lodash。之所以说是隐式的是因为 index.js 并未显式声明需要引入 lodash，只是假定推测已经存在一个全局变量 _。
 
 使用这种方式去管理 JavaScript 项目会有一些问题：
 
@@ -32,4 +32,23 @@ npx webpack --config webpack.config.js
 "scripts": {
     "build": "webpack"
   }
+```
+
+#5.commit 加载css
+**css-loader**: 解释(interpret) @import 和 url() ，会 import/require() 后再解析(resolve)它们。
+
+**style-loader**: Adds CSS to the DOM by injecting a \<style> tag
+
+```
+module: {
+        rules: [
+            {
+                test: /.css$/,
+                use: [
+                    'style-loader',
+                    'css-loader'
+                ]
+            }
+        ]
+    }
 ```

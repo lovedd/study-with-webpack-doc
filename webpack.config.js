@@ -12,5 +12,16 @@ module.exports = {
         // __dirname是当前文件所在的文件目录
         // 表示不管在哪里运行该代码，始终将path指定为与webpackconfig.js同级的dist目录
         path: path.resolve(__dirname, 'dist')
+    },
+    module: {
+        rules: [
+            {
+                test: /.css$/,
+                use: [
+                    'style-loader',
+                    'css-loader'
+                ]
+            }
+        ]
     }
-}
+};

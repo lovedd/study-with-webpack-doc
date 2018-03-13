@@ -19,6 +19,8 @@
   },
   "homepage": "https://github.com/lovedd/study-with-webpack-doc#readme",
   "devDependencies": {
+    "css-loader": "^0.28.10",
+    "style-loader": "^0.20.3",
     "webpack": "^4.1.1",
     "webpack-cli": "^2.0.11"
   },
