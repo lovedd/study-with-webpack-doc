@@ -177,3 +177,21 @@ Vue Loader：此 loader 支持用于 vue 组件的 HMR，提供开箱即用体�
 利用DefinePlugin 插件
 技术上讲，NODE_ENV 是一个由 Node.js 暴露给执行脚本的系统环境变量。通常用于决定在开发环境与生产环境(dev-vs-prod)下，服务器工具、构建脚本和客户端 library 的行为。然而，与预期不同的是，无法在构建脚本 webpack.config.js 中，将 process.env.NODE_ENV 设置为 "production"，请查看 #2537。因此，例如 process.env.NODE_ENV === 'production' ? '[name].[hash].bundle.js' : '[name].bundle.js' 这样的条件语句，在 webpack 配置文件中，无法按照预期运行。
 另外，任何位于 /src 的本地代码都可以关联到 process.env.NODE_ENV 环境变量
+
+
+##### 使用 ExtractTextPlugin 将 CSS 分离成单独的文件
+
+##### 再往后涉及到性能优化
+1. 去重：
+
+* ExtractTextPlugin: 用于将 CSS 从主应用程序中分离。
+* bundle-loader: 用于分离代码和延迟加载生成的 bundle。
+* promise-loader: 类似于 bundle-loader ，但是使用的是 promises。
+
+2. 动态导入
+* 优先选择的方式是，使用符合 ECMAScript 提案 的 import() 语法。
+* 使用 webpack 特定的 require.ensure
+
+3. 懒加载
+
+###注： 还没有完成学习，慢慢实践和学习中~~
