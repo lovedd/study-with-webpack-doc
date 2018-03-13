@@ -122,3 +122,8 @@ clean-webpack-plugin 在每次构建前清理 /dist 文件夹
 
 #12. commit source map
 开发环境使用dev-tool开启，帮助捕捉错误信息，精确显示错误代码地址
+
+#13. commit watch
+每次改动代码以后npm run build很麻烦。可以自动监听改动编译代码，有3中办法。
+
+第1种就是watch。文件改动后自动编译，但浏览器不会自动加载，需要手动刷新。
