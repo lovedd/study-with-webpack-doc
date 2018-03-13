@@ -149,3 +149,14 @@ webpack-dev-server 在内部使用了它，同时，它也可以作为一个单�
 我想，这里热更新主要是为了在依赖模块里做监听和处理操作吗？就像这里，可以在index监听到print的改变而做出处理。
 
 果你使用了 webpack-dev-middleware 而没有使用 webpack-dev-server，请使用 webpack-hot-middleware package 包，以在你的自定义服务或应用程序上启用 HMR。
+
+#17. commit HMR问题
+上个提交中，按钮的 onclick 事件仍然绑定在旧的 printMe 函数上。
+
+为了让它与 HRM 正常工作，我们需要使用 module.hot.accept 更新绑定到新的 printMe 函数上。
+
+幸运的是，存在很多 loader（其中一些在下面提到），使得模块热替换的过程变得更容易。
+
+例如：
+style-loader css-loader： 热加载样式表。
+Vue Loader：此 loader 支持用于 vue 组件的 HMR，提供开箱即用体验。
