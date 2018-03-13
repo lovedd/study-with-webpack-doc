@@ -52,3 +52,19 @@ module: {
         ]
     }
 ```
+
+#6. commit 图片加载
+**file-loader**: 当你使用import MyImage from './my-image.png'时，该图像将被处理并添加到 output 目录，并且 MyImage 变量将包含该图像在处理后的最终 url。
+
+**css-loader**：CSS 中的 url('./my-image.png') 会使用类似的过程去处理。loader 会识别这是一个本地文件，并将 './my-image.png' 路径，替换为输出目录中图像的最终路径。
+
+**html-loade**: 以相同的方式处理 \<img src="./my-image.png" />。
+
+```
+{
+    test: /.(png|svg|jpg|gif)$/,
+    use: [
+        'file-loader'
+    ]
+}
+```
