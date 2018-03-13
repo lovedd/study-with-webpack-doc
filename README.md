@@ -141,4 +141,11 @@ devServer: {
 #15. commit webpack-dev-middleware
 webpack-dev-middleware 是一个容器(wrapper)，它可以把 webpack 处理后的文件传递给一个服务器(server)。
 webpack-dev-server 在内部使用了它，同时，它也可以作为一个单独的包来使用，以便进行更多自定义设置来实现更多的需求。
-可以自己写服务器逻辑，非常灵活。
+可以自己写服务器逻辑，非常灵活。此时需要手动刷新。
+
+#16. commit 启用HMR
+其实在启用HMR之前，我将入口出口调整为一个，使用webpack-dev-server也是可以热更新的，所以不清楚这里为什么还需要一堆配置。看来回头还要好好琢磨一下。
+
+我想，这里热更新主要是为了在依赖模块里做监听和处理操作吗？就像这里，可以在index监听到print的改变而做出处理。
+
+果你使用了 webpack-dev-middleware 而没有使用 webpack-dev-server，请使用 webpack-hot-middleware package 包，以在你的自定义服务或应用程序上启用 HMR。
