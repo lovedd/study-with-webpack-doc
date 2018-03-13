@@ -118,4 +118,7 @@ output: {
 HtmlWebpackPlugin 创建了一个全新的文件，所有的 bundle 会自动添加到 html 中。
 
 #11. commit 清理/dist文件夹
-在每次构建前清理 /dist 文件夹
+clean-webpack-plugin 在每次构建前清理 /dist 文件夹
+
+#12. commit source map
+开发环境使用dev-tool开启，帮助捕捉错误信息，精确显示错误代码地址
