@@ -18,6 +18,9 @@ module.exports = {
       new CleanWebpackPlugin(['dist'])
     ],
     devtool: "inline-source-map",
+    devServer: {
+        contentBase: './dist'
+    },
     output: {
         filename: "[name].bundle.js",
         // path.resolve()方法可以将多个路径解析（类似于cd操作）为一个规范化的绝对路径

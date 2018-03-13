@@ -127,3 +127,13 @@ clean-webpack-plugin 在每次构建前清理 /dist 文件夹
 每次改动代码以后npm run build很麻烦。可以自动监听改动编译代码，有3中办法。
 
 第1种就是watch。文件改动后自动编译，但浏览器不会自动加载，需要手动刷新。
+
+#14. commit webpack-dev-server
+```
+devServer: {
+        contentBase: './dist'
+    },
+```
+以上配置告知 webpack-dev-server，在 localhost:8080 下建立服务，将 dist 目录下的文件，作为可访问文件。
+
+修改和保存任意源文件，web 服务器就会自动重新加载编译后的代码
