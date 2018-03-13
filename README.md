@@ -98,4 +98,23 @@ file-loader 和 url-loader 可以接收并加载任何文件，然后将其输�
 ```
 在使用 d3 等工具来实现某些数据可视化时，预加载数据会非常有用。我们可以不用再发送 ajax 请求，然后于运行时解析数据，而是在构建过程中将其提前载入并打包到模块中，以便浏览器加载模块后，可以立即从模块中解析数据。
 
-#9. 
+#9. commit 多入口输入输出
+```
+entry: {
+    app: './src/index.js',
+    print: './src/print.js'
+},
+output: {
+    filename: "[name].bundle.js",
+    // path.resolve()方法可以将多个路径解析（类似于cd操作）为一个规范化的绝对路径
+    // __dirname是当前文件所在的文件目录
+    // 表示不管在哪里运行该代码，始终将path指定为与webpackconfig.js同级的dist目录
+    path: path.resolve(__dirname, 'dist')
+}
+```
+生成的包将被重命名在一个构建中，但是我们的index.html文件仍然会引用旧的名字。需要手动更改，接下来我们用 HtmlWebpackPlugin 来解决这个问题。
+
+#10. commit HtmlWebpackPlugin
+HtmlWebpackPlugin 创建了一个全新的文件，所有的 bundle 会自动添加到 html 中。
+
+#11. 
