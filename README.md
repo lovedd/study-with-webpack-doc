@@ -15,3 +15,13 @@ folllow the webpack doc, just do it.
 #2. commit npx打包依赖放入dist
 首先，我们稍微调整下目录结构，将“源”代码(/src)从我们的“分发”代码(/dist)中分离出来。“源”代码是用于书写和编辑的代码。“分发”代码是构建过程产生的代码最小化和优化后的“输出”目录，最终将在浏览器中加载。
 执行 npx webpack，会将我们的脚本作为入口起点，然后输出为 bundle.js
+
+Node 8.2+ 版本提供的 npx 命令，可以运行在初始安装的 webpack 包(package)的 webpack 二进制文件（./node_modules/.bin/webpack）
+```
+npx webpack src/index.js --output dist/bundle.js
+```
+
+#3. commit 通过配置文件构建
+```
+npx webpack --config webpack.config.js
+```
