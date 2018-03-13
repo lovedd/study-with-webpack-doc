@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/lovedd/study-with-webpack-doc#readme",
   "devDependencies": {
+    "clean-webpack-plugin": "^0.1.19",
     "css-loader": "^0.28.10",
     "csv-loader": "^2.1.1",
     "file-loader": "^1.1.11",

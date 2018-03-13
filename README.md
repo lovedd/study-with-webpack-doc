@@ -117,4 +117,5 @@ output: {
 #10. commit HtmlWebpackPlugin
 HtmlWebpackPlugin 创建了一个全新的文件，所有的 bundle 会自动添加到 html 中。
 
-#11. 
+#11. commit 清理/dist文件夹
+在每次构建前清理 /dist 文件夹
