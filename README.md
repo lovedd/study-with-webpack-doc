@@ -68,3 +68,14 @@ module: {
     ]
 }
 ```
+
+#7. commit 加载字体
+file-loader 和 url-loader 可以接收并加载任何文件，然后将其输出到构建目录
+```
+{
+    test:/\.(woff|woff2|eot|ttf|otf)$/,
+    use: [
+        'file-loader'
+    ]
+}
+```

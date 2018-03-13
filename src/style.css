@@ -1,4 +1,12 @@
+@font-face {
+    font-family: 'XoloniumRegular';
+    src: url('./Xolonium-Regular.otf') format('otf');
+    font-weight: 600;
+    font-style: normal;
+}
+
 .hello {
     color: red;
+    font-family: 'XoloniumRegular';
     background: url('./icon.png');
 }
