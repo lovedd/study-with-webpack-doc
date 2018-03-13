@@ -137,3 +137,8 @@ devServer: {
 以上配置告知 webpack-dev-server，在 localhost:8080 下建立服务，将 dist 目录下的文件，作为可访问文件。
 
 修改和保存任意源文件，web 服务器就会自动重新加载编译后的代码
+
+#15. commit webpack-dev-middleware
+webpack-dev-middleware 是一个容器(wrapper)，它可以把 webpack 处理后的文件传递给一个服务器(server)。
+webpack-dev-server 在内部使用了它，同时，它也可以作为一个单独的包来使用，以便进行更多自定义设置来实现更多的需求。
+可以自己写服务器逻辑，非常灵活。
