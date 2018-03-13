@@ -5,9 +5,12 @@
 var path = require('path');
 
 module.exports = {
-    entry: './src/index.js',
+    entry: {
+        app: './src/index.js',
+        print: './src/print.js'
+    },
     output: {
-        filename: "bundle.js",
+        filename: "[name].bundle.js",
         // path.resolve()方法可以将多个路径解析（类似于cd操作）为一个规范化的绝对路径
         // __dirname是当前文件所在的文件目录
         // 表示不管在哪里运行该代码，始终将path指定为与webpackconfig.js同级的dist目录
