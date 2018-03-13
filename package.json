@@ -1,0 +1,23 @@
+{
+  "name": "study-with-webpack-doc",
+  "version": "1.0.0",
+  "description": "folllow the webpack doc, just do it.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lovedd/study-with-webpack-doc.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lovedd/study-with-webpack-doc/issues"
+  },
+  "homepage": "https://github.com/lovedd/study-with-webpack-doc#readme",
+  "devDependencies": {
+    "webpack": "^4.1.1"
+  }
+}
